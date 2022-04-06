@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "The Shining",
+        "author": {
+            "id": 1,
+            "prename": "Stephen",
+            "surname": "King"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Pet Sematary",
+        "author": {
+            "id": 1,
+            "prename": "Stephen",
+            "surname": "King"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Christine",
+        "author": {
+            "id": 1,
+            "prename": "Stephen",
+            "surname": "King"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Der Wendigo",
+        "author": {
+            "id": 3,
+            "prename": "Algernon",
+            "surname": "Blackwood"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Der Rabe",
+        "author": {
+            "id": 4,
+            "prename": "Edgar Allan",
+            "surname": "Poe"
+        }
+    },
+    {
+        "id": 6,
+        "title": "Cthulhus Ruf",
+        "author": {
+            "id": 5,
+            "prename": "Howard Phillips",
+            "surname": "Lovecraft"
+        }
+    },
+    {
+        "id": 7,
+        "title": "Das Grauen von Dunwich",
+        "author": {
+            "id": 5,
+            "prename": "Howard Phillips",
+            "surname": "Lovecraft"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Hamlet",
+        "author": {
+            "id": 2,
+            "prename": "William",
+            "surname": "Shakespeare"
+        }
+    },
+    {
+        "id": 9,
+        "title": "König Lear",
+        "author": {
+            "id": 2,
+            "prename": "William",
+            "surname": "Shakespeare"
+        }
+    },
+    {
+        "id": 10,
+        "title": "Die Schwarze Katze",
+        "author": {
+            "id": 4,
+            "prename": "Edgar Allan",
+            "surname": "Poe"
+        }
+    },
+    {
+        "id": 11,
+        "title": "Annabel Lee",
+        "author": {
+            "id": 4,
+            "prename": "Edgar Allan",
+            "surname": "Poe"
+        }
+    },
+    {
+        "id": 12,
+        "title": "The Willows",
+        "author": {
+            "id": 3,
+            "prename": "Algernon",
+            "surname": "Blackwood"
+        }
+    }
+]

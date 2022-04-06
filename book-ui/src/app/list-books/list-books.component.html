@@ -1,0 +1,24 @@
+<p class="title">List books</p>
+
+<table class="eis-table" style="width: 500px">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let item of list">
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.author?.prename}} {{item.author?.surname}}</td>
+      <td> 
+          <button mat-button color="primary" [routerLink]="['/book', item.id]"><mat-icon>edit</mat-icon>Edit</button>
+      </td>
+    </tr>
+</table>
+
+<div style="margin-top: 16px">
+  <button mat-button color="primary" [routerLink]="['/book', -1]"><mat-icon>save</mat-icon>Create</button>
+</div>
+
+ 

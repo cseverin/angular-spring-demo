@@ -1,0 +1,35 @@
+<div *ngIf="edit!=null && edit.book && id">
+    <p *ngIf="id<0" class="title">Create a new book entry:</p>
+    <p *ngIf="id>=0" class="title">Edit book entry: {{edit?.book?.title}}</p>
+
+    <table class="eis-table" style="width: 500px">
+        <tr>
+            <td>Titel:</td>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill" style="width:500px">
+                    <mat-label>Book title</mat-label>
+                    <input matInput [(ngModel)]="edit.book.title">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Book author</mat-label>
+                    <mat-select [(ngModel)]="edit.book.authorId">
+                        <mat-option *ngFor="let author of edit.authors" [value]="author.id">
+                            {{author.prename}} {{author.surname}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <div style="margin-top: 16px">
+        <button mat-button color="primary" (click)="store()">
+            <mat-icon>save</mat-icon>Store
+        </button>
+        <button mat-flat-button [routerLink]="['/book/list']">Back</button>
+    </div>
+</div>

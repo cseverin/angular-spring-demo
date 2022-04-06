@@ -1,0 +1,29 @@
+{
+    "book":{
+        "id": 1,
+        "title": "The Shining",
+        "authorId": 1
+    },
+    "authors":[
+        {
+            "id": 1,
+            "prename": "Stephen",
+            "surname": "King"
+        },
+        {
+            "id": 3,
+            "prename": "Algernon",
+            "surname": "Blackwood"
+        },
+        {
+            "id": 4,
+            "prename": "Edgar Allan",
+            "surname": "Poe"
+        },
+        {
+            "id": 5,
+            "prename": "Howard Phillips",
+            "surname": "Lovecraft"
+        }
+    ]
+}
