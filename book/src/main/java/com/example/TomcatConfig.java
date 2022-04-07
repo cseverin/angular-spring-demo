@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import org.apache.catalina.Context;
@@ -10,7 +9,6 @@ import org.springframework.boot.web.embedded.tomcat.TomcatWebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jndi.JndiObjectFactoryBean;
 
 @Configuration
 public class TomcatConfig {
