@@ -8,9 +8,8 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.embedded.tomcat.TomcatWebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class TomcatConfig {
 
 	@Bean  
@@ -31,8 +30,8 @@ public class TomcatConfig {
 				resource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
 				resource.setProperty("driverClassName", "org.mariadb.jdbc.Driver");
 				resource.setProperty("url", "jdbc:mariadb://localhost:3306/database1");
-				resource.setProperty("username", "casi");
-				resource.setProperty("password", "melissa");
+				resource.setProperty("username", "test");
+				resource.setProperty("password", "test");
 				context.getNamingResources().addResource(resource);
 
 			}
