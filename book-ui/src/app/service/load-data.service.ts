@@ -22,4 +22,20 @@ export class LoadDataService {
     return this.http.get<Edit>(environment.urlGetBooks.replace(':id',String(id)));
   }
 
+  deleteBook(id: number): Observable<void> {
+    if (environment.production){
+      return this.http.delete<void>(environment.urlGetBooks.replace(':id',String(id)));
+    } else{
+      return this.http.get<void>(environment.urlGetBooks.replace(':id',String(id)));
+    }
+  }
+
+  store(b:Book): Observable<Edit>{
+    if (environment.production){
+      return this.http.post<Edit>(environment.urlPostBooks, b); 
+    }else{
+      return this.http.get<Edit>(environment.urlPostBooks); 
+  
+    }
+  }
 }

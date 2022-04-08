@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   urlListBooks: "/assets/list-books.json",
-  urlGetBooks: "/assets/edit-book.json?:id"
+  urlGetBooks: "/assets/edit-book.json?:id",
+  urlPostBooks: "/assets/edit-book.json"
 };
 
 /*

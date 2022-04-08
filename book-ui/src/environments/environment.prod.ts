@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
-  urlListBooks: "/api/books/list",
-  urlGetBooks: "/api/books/get/:id"
+  urlListBooks: "/api/books",
+  urlGetBooks: "/api/books/:id",
+  urlPostBooks: "/api/books" 
 };
