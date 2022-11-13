@@ -35,8 +35,8 @@ dependencies {
 	providedRuntime 'org.apache.tomcat:tomcat-dbcp:9.0.8'
 
 	runtimeOnly 'org.hsqldb:hsqldb'
-	
-	//implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
+
+	implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'	
 	
 }
 

@@ -1,5 +1,6 @@
 package com.example;
 
+import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import org.apache.catalina.Context;
@@ -8,8 +9,10 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.embedded.tomcat.TomcatWebServer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jndi.JndiObjectFactoryBean;
 
-//@Configuration
+@Configuration
 public class TomcatConfig {
 
 	@Bean  
@@ -26,12 +29,12 @@ public class TomcatConfig {
 			protected void postProcessContext(Context context) {
 				ContextResource resource = new ContextResource();
 				resource.setType(DataSource.class.getName());
-				resource.setName("jdbc/DB1");
+				resource.setName("jdbc/DB");
 				resource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
 				resource.setProperty("driverClassName", "org.mariadb.jdbc.Driver");
 				resource.setProperty("url", "jdbc:mariadb://localhost:3306/database1");
-				resource.setProperty("username", "test");
-				resource.setProperty("password", "test");
+				resource.setProperty("username", "xxx");
+				resource.setProperty("password", "xxx");
 				context.getNamingResources().addResource(resource);
 
 			}
@@ -40,18 +43,15 @@ public class TomcatConfig {
 		return tomcat;
 	}
 
-	/*
 
 	@Bean(destroyMethod="")
 	public DataSource jndiDataSource() throws IllegalArgumentException, NamingException {
 		JndiObjectFactoryBean bean = new JndiObjectFactoryBean();
-		bean.setJndiName("java:comp/env/jdbc/DB1");
+		bean.setJndiName("java:comp/env/jdbc/DB");
 		bean.setProxyInterface(DataSource.class);
 		bean.setLookupOnStartup(false);
 		bean.afterPropertiesSet();
 		return (DataSource)bean.getObject();
 	}
-
-	*/
 
 }
