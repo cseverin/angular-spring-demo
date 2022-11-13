@@ -32,7 +32,7 @@ public class TomcatConfig {
 				resource.setName("jdbc/DB");
 				resource.setProperty("factory", "org.apache.tomcat.jdbc.pool.DataSourceFactory");
 				resource.setProperty("driverClassName", "org.mariadb.jdbc.Driver");
-				resource.setProperty("url", "jdbc:mariadb://localhost:3306/database1");
+				resource.setProperty("url", "jdbc:mariadb://host.docker.internal:3306/database1");
 				resource.setProperty("username", "casi");
 				resource.setProperty("password", "melissa");
 				context.getNamingResources().addResource(resource);
